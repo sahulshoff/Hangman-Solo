@@ -1,0 +1,175 @@
+body {
+	background-color: black;
+	color: blanchedalmond;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+h1 {
+	font-size: 100px;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 8px;
+}
+
+.currentWord {
+	align-items: center;
+	justify-content: space-around;
+}
+
+.the_word {
+	align-items: center;
+	justify-content: space-around;
+	margin-left: 25px;
+}
+
+p {
+	text-align: center;
+	margin-top: 0px;
+}
+.letterInput {
+	height: 50px;
+	width: 200px;
+	font-size: 30px;
+	color: cyan;
+	background-color: rgb(4, 8, 58);
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.guess {
+	height: 50px;
+	width: 150px;
+	font-size: 30px;
+	background-color: blanchedalmond;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.guess:hover {
+	background-color: blue;
+}
+.restart {
+	height: 50px;
+	width: 150px;
+	font-size: 30px;
+	background-color: blanchedalmond;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+.restart:hover {
+	background-color: crimson;
+}
+
+.incorrGuess {
+	align-items: center;
+	justify-content: center;
+}
+
+.win,
+.lose {
+	display: none;
+}
+
+.win h2 {
+	color: red;
+}
+
+.lose h2 {
+	color: blue;
+}
+
+@keyframes hinge {
+	0% {
+		-webkit-transform-origin: top left;
+		transform-origin: top left;
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+	}
+
+	20%,
+	60% {
+		-webkit-transform: rotate3d(0, 0, 1, 80deg);
+		transform: rotate3d(0, 0, 1, 80deg);
+		-webkit-transform-origin: top left;
+		transform-origin: top left;
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+	}
+
+	40%,
+	80% {
+		-webkit-transform: rotate3d(0, 0, 1, 60deg);
+		transform: rotate3d(0, 0, 1, 60deg);
+		-webkit-transform-origin: top left;
+		transform-origin: top left;
+		-webkit-animation-timing-function: ease-in-out;
+		animation-timing-function: ease-in-out;
+		opacity: 1;
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 700px, 0);
+		transform: translate3d(0, 700px, 0);
+		opacity: 0;
+	}
+}
+
+header {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-name: hinge;
+	animation-name: hinge;
+	animation-delay: 500ms;
+}
+
+@keyframes bounceInDown {
+	from,
+	60%,
+	75%,
+	90%,
+	to {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	}
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -3000px, 0);
+		transform: translate3d(0, -3000px, 0);
+	}
+
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.lose {
+	-webkit-animation-duration: 2s;
+	animation-duration: 1000ms;
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+	animation-delay: 500ms;
+}
